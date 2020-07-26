@@ -8,6 +8,9 @@ import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Java Objects to JSON
+ */
 public class JacksonExample {
 	public static void main(String[] args) {
 
