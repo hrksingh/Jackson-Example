@@ -16,7 +16,7 @@ public class JsonToJavaObject {
 			Staff staff = mapper.readValue(new File("e:\\staff.json"), Staff.class);
 
 			// JSON string to Java object
-			String jsonInString = "{\"name\":\"hrk\",\"age\":22,\"skills\":[\"Jersey\",\"Jackson\"]}";
+			String jsonInString = "{\"staff_name\":\"hrk\",\"age\":22,\"skills\":[\"Jersey\",\"Jackson\"]}";
 			Staff staff2 = mapper.readValue(jsonInString, Staff.class);
 
 			// compact print from Ash
@@ -26,7 +26,7 @@ public class JsonToJavaObject {
 			String prettyStaff = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(staff);
 
 			System.out.println(prettyStaff+"\n");
-
+            System.out.println("<=============================================================================================================>");
 			// compact print from Hrk
 			System.out.println(staff2+"\n");
 
@@ -34,6 +34,7 @@ public class JsonToJavaObject {
 			String prettyStaff1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(staff2);
 
 			System.out.println(prettyStaff1+"\n");
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();
