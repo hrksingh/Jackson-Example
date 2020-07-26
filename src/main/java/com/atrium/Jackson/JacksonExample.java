@@ -56,6 +56,9 @@ public class JacksonExample {
 		};
 		staff.setSalary(salary);
 		staff.setSkills(Arrays.asList("java", "python", "Android", "C","C++"));
+		staff.setToIgnore("Ignore me");
+		staff.setToIgnoreProperties1("toIgnoreProperties1");
+		staff.setToIgnoreProperties2("toIgnoreProperties2");
 
 		return staff;
 

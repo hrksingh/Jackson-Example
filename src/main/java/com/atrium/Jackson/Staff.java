@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
@@ -20,6 +22,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties({ "toIgnoreProperties1", "toIgnoreProperties2" })
 public class Staff {
 
 	@JsonProperty("staff_name")
@@ -37,4 +40,11 @@ public class Staff {
 
 	@JsonView(CompanyViews.Manager.class)
 	private Map<String, BigDecimal> salary;
+
+	@JsonIgnore
+	private String toIgnore;
+
+	private String toIgnoreProperties1;
+
+	private String toIgnoreProperties2;
 }

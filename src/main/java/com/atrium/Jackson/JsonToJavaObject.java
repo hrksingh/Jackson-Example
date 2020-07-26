@@ -16,7 +16,7 @@ public class JsonToJavaObject {
 			Staff staff = mapper.readValue(new File("e:\\staff.json"), Staff.class);
 
 			// JSON string to Java object
-			String jsonInString = "{\"staff_name\":\"hrk\",\"age\":22,\"skills\":[\"Jersey\",\"Jackson\"]}";
+			String jsonInString = "{\"staff_name\":\"hrk\",\"age\":22,\"skills\":[\"Jersey\",\"Jackson\"],\"toIgnore\":\"abc\"}";
 			Staff staff2 = mapper.readValue(jsonInString, Staff.class);
 
 			// compact print from Ash
